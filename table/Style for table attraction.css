@@ -1,0 +1,36 @@
+h1{
+    font-style:italic;
+    padding-left: 200px;
+    color:rgb(43, 35, 117)
+}
+body{
+    background-color: bisque;
+}
+th{
+    padding:25px 50px 15px 50px;
+    font-style:inherit;
+    font-size: medium;
+}
+td{
+    padding-left:50px;
+    padding-top: 10px;
+}
+#head{
+   
+    background-color:dodgerblue;
+}
+.sn{
+    background-color:rgba(21, 102, 184, 0.783);
+}
+.person{
+    background-color: #FA7E70;
+}
+.redg{
+    background-color: #FDBD7C
+}
+.ph{
+    background-color: #63BE7B
+}
+td{
+    background-color:#BFD880;
+}
