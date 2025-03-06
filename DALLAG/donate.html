@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate page</title>
+    <style>
+        body{
+            border: 2px solid black;
+            height: 640px;
+            width: 361px;
+            position: absolute;
+            margin-left: 550px;
+            margin-top: 30px;
+        }
+        img{
+            position: absolute;
+            opacity: 0.6;
+            height: 640px;
+        }
+        .bt{
+            position: absolute;
+            margin-top: 450px;
+            margin-left: 110px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-color: transparent;
+            background-color: rgb(255, 234, 0);
+        }
+        .arrow{
+            position: absolute;
+            padding: 8px;
+            background-color: rgba(255, 0, 0, 0);
+            border-color: transparent;
+            margin-top: 10px;
+            font-weight: 5px;
+            font-style: oblique;
+            margin-left: 10px;
+        }
+        .details{
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 50px;
+            font-size: 20px;
+            font-style:bold;
+            color: black;
+        }
+        .notes{
+            color: rgb(0, 0, 0);
+            position: absolute;
+            margin-top: 500px;
+            width: 361px;
+            overflow-wrap: break-word;
+        }
+    </style>
+ </head>
+ <body>
+    <img src="./images/istockphoto-1060352206-612x612.jpg" heigth="640px" width="361px">
+    <div class="container">
+        <div class="details">
+            <label >Receipe   : </label><input type="text" placeholder="Coooked rice,etc...." width="250px"><br>
+            <br><br><label>Choose Type of Food:</label><br><br>
+
+            <input type="radio" name="gen"><label style="color: rgb(16, 78, 16);">Veg</label>
+            <input type="radio" name="gen" style="padding-left:20px;"><label style="color: rgb(110, 16, 16);">Non-Veg</label><br><br>
+
+            <labe>Food Quantity: </labe><input type="nunber" placeholder="1,2,3....">
+            <br><br>
+            <label>Date of food prepared:</label><br><br>
+            <input type="radio" name="dat"><label>Today</label>
+            <input type="radio" name="dat"><label>Yesterday</label>
+        </div>
+        <a href="home.html"><button class="arrow"><b><</b></button></a><br>        
+        <a href="map.html"><button class="bt">Location</button></a>
+        <div class="notes">
+            <p><b>Note :</b> Please donate one day before food (OR) fresh>Food only.Please don't donate spoiled food and Unhealthy Food items</p><br>
+        </div>
+        
+    </div>
+ </body>
+ </html>
