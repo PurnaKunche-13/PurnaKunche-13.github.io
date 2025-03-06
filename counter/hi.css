@@ -1,0 +1,33 @@
+.body
+{
+    background-color: ;
+}
+#box{
+    border: 2px solid;
+    width: 500px ;
+    height: 100px;
+}
+#contenttext{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 40px;
+}
+button{
+    margin: 10px 10px 10px 10px;
+}
+
+#deb{
+    height: 40px;
+    width: 150px;
+    background-color: rgb(243, 87, 87);
+}
+#res{
+    height: 40px;
+    width: 150px;
+    background-color: rgb(105, 202, 223);
+}
+#inb{
+    height: 40px;
+    width: 150px;
+    background-color: rgb(105, 243, 87);
+}
