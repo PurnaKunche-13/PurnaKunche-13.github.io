@@ -1,7 +1,6 @@
 const navlinks = document.querySelectorAll("header nav a");
 const logolink = document.querySelector(".logo");
 const sections = document.querySelectorAll("section");
-const resumeBtns = document.querySelectorAll(".resume-btn");
 
 const activePage = () => {
   const barsBox = document.querySelector(".bars-box");
@@ -51,6 +50,8 @@ logolink.addEventListener("click", () => {
     }, 1100);
   }
 });
+
+const resumeBtns = document.querySelectorAll(".resume-btn");
 
 resumeBtns.forEach((btn, idx) => {
   btn.addEventListener("click", () => {
