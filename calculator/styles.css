@@ -43,7 +43,7 @@ body {
 }
 
 #display {
-  width: 98%;
+  width: 90%;
   font-size: 2em;
   padding: 15px;
   margin-bottom: 15px;
@@ -93,4 +93,12 @@ button.equals {
 
 button.zero {
   grid-column: span 2;
+}
+
+button.numb {
+  background-color: rgb(227, 221, 221) smoke;
+}
+
+button.numb:hover {
+  background-color: grey;
 }
