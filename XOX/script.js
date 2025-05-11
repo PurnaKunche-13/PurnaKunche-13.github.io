@@ -6,14 +6,18 @@ function makeMove(cell, index) {
   if (!gameActive || board[index] !== "") return;
 
   board[index] = currentPlayer;
+  if (currentPlayer !== "X") {
+    document.body.style.backgroundColor = "#0d0d61";
+  } else {
+    document.body.style.backgroundColor = "#9a0b0b";
+  }
   cell.innerText = currentPlayer;
-
   if (checkWinner()) {
     document.getElementById("result").innerText = `${currentPlayer} Wins!`;
     gameActive = false;
+    document.body.style.backgroundColor = "green";
     return;
   }
-
   currentPlayer = currentPlayer === "X" ? "O" : "X";
 }
 
@@ -41,4 +45,5 @@ function resetGame() {
   document.getElementById("result").innerText = "";
   currentPlayer = "X";
   gameActive = true;
+  document.body.style.backgroundColor = "#0d0d61";
 }
