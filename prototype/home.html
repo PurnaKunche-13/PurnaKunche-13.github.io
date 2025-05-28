@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agriculture Solution App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Agriculture Solution</h1>
+      </header>
+
+      <nav class="nav" role="navigation" aria-label="Main navigation">
+        <button
+          onclick="showSection('home')"
+          aria-controls="home"
+          aria-selected="true"
+          id="nav-home"
+        >
+          🏠 Home
+        </button>
+        <button
+          onclick="showSection('weather')"
+          aria-controls="weather"
+          id="nav-weather"
+        >
+          ☀️ Weather
+        </button>
+        <button
+          onclick="showSection('crops')"
+          aria-controls="crops"
+          id="nav-crops"
+        >
+          🌾 Crops
+        </button>
+        <button onclick="showSection('ai')" aria-controls="ai" id="nav-ai">
+          🤖 AI Help
+        </button>
+        <button
+          onclick="showSection('purchase')"
+          aria-controls="purchase"
+          id="nav-purchase"
+        >
+          🛒 Purchase
+        </button>
+        <button
+          onclick="showSection('cart')"
+          aria-controls="cart"
+          id="nav-cart"
+        >
+          🧺 Cart
+        </button>
+      </nav>
+
+      <main>
+        <section
+          id="home"
+          class="section active"
+          tabindex="0"
+          aria-label="Home section"
+        >
+          <h2>Welcome to Agriculture Solution!</h2>
+          <p>
+            We provide comprehensive support for farmers including weather
+            updates, crop info, AI-based advice, and seed purchases — all in one
+            place.
+          </p>
+          <p>
+            Start by selecting a tab above. Whether you want to check the latest
+            weather, learn about crops, or shop for seeds, we've got you
+            covered!
+          </p>
+          <p>Happy farming! 🌱🚜</p>
+        </section>
+
+        <section
+          id="weather"
+          class="section"
+          tabindex="0"
+          aria-label="Weather information section"
+        >
+          <h2>Weather Information</h2>
+          <p><strong>Current Weather:</strong> ☀️ Sunny, 36°C</p>
+          <p>
+            <strong>Humidity:</strong> 40% &nbsp;&nbsp;|&nbsp;&nbsp;
+            <strong>Wind Speed:</strong> 10 km/h
+          </p>
+          <p>
+            <strong>Note:</strong> Sudden weather changes will trigger alerts
+            here to help you plan your farming activities better.
+          </p>
+          <p>
+            <em>Pro Tip:</em> Water your crops early in the morning or late in
+            the evening to avoid evaporation loss.
+          </p>
+        </section>
+
+        <section
+          id="crops"
+          class="section"
+          tabindex="0"
+          aria-label="Crop information section"
+        >
+          <h2>Crop Information & Tips</h2>
+          <ul>
+            <li>
+              <strong>Rice:</strong> Requires approx 40% water, thrives best in
+              black soil, takes around 6 months from sowing to harvest.
+              <br />
+              Ideal temperature: 20-35°C
+            </li>
+            <li>
+              <strong>Vegetables:</strong> Requires high water (80%), adaptable
+              to all soil types, harvest in about 1 month.
+              <br />
+              Tips: Rotate vegetables to maintain soil health.
+            </li>
+            <li>
+              <strong>Wheat:</strong> Needs well-drained loamy soil, moderate
+              water, matures in 4 months.
+            </li>
+            <li>
+              <strong>Maize (Corn):</strong> Requires warm weather and fertile
+              soil, harvest in 3-4 months.
+            </li>
+          </ul>
+          <p>
+            <strong>Additional Tips:</strong> Ensure proper soil testing before
+            sowing and apply organic manure for better yield.
+          </p>
+        </section>
+
+        <section
+          id="ai"
+          class="section"
+          tabindex="0"
+          aria-label="AI based help section"
+        >
+          <h2>AI-Based Help</h2>
+          <p>
+            Ask any question related to farming, crops, weather, or pest
+            control.
+          </p>
+          <div class="input-group">
+            <label for="ai-question">Your question:</label>
+            <input
+              type="text"
+              id="ai-question"
+              aria-describedby="ai-help"
+              placeholder="E.g., What crop is best for black soil?"
+            />
+          </div>
+          <button id="ai-submit-btn">Submit</button>
+          <div
+            id="ai-response"
+            style="
+              margin-top: 15px;
+              font-size: 1.1rem;
+              color: var(--primary);
+              min-height: 40px;
+            "
+          ></div>
+        </section>
+
+        <section
+          id="purchase"
+          class="section"
+          tabindex="0"
+          aria-label="Purchase seeds section"
+        >
+          <h2>Purchase Seeds</h2>
+          <p>
+            <strong>Rice Seeds:</strong> ₹100 per kg (80% quality, No chemicals)
+          </p>
+          <p>
+            <strong>Vegetable Seeds:</strong> ₹50 per kg (95% quality, No
+            chemicals)
+          </p>
+          <p>
+            <strong>Wheat Seeds:</strong> ₹80 per kg (High germination rate)
+          </p>
+          <p><strong>Maize Seeds:</strong> ₹70 per kg (Certified quality)</p>
+          <div
+            style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px"
+          >
+            <button onclick="addToCart('Rice Seeds', 100)">
+              Add Rice Seeds to Cart
+            </button>
+            <button onclick="addToCart('Vegetable Seeds', 50)">
+              Add Vegetable Seeds to Cart
+            </button>
+            <button onclick="addToCart('Wheat Seeds', 80)">
+              Add Wheat Seeds to Cart
+            </button>
+            <button onclick="addToCart('Maize Seeds', 70)">
+              Add Maize Seeds to Cart
+            </button>
+          </div>
+        </section>
+
+        <section
+          id="cart"
+          class="section"
+          tabindex="0"
+          aria-label="Shopping cart section"
+        >
+          <h2>Your Cart</h2>
+          <div
+            id="cart-items"
+            class="cart-items"
+            aria-live="polite"
+            aria-relevant="all"
+          >
+            <p>No items in cart.</p>
+          </div>
+          <p style="font-size: 1.2rem; margin-top: 15px">
+            <strong>Total: ₹<span id="cart-total">0</span></strong>
+          </p>
+          <div class="input-group">
+            <label for="payment">Payment Method:</label>
+            <select id="payment" aria-label="Select payment method">
+              <option value="online">Online</option>
+              <option value="cod">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="location">Delivery Location:</label>
+            <input
+              type="text"
+              id="location"
+              aria-label="Enter your delivery location"
+              placeholder="Enter your location"
+            />
+          </div>
+          <button onclick="checkout()">Checkout</button>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Agriculture Solution | All rights reserved</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
