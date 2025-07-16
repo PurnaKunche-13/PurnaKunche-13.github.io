@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>curreny counter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="clear" id="clear" onclick="empty()">Clear</button>
+    <table border="1">
+      <tr>
+        <th>Currency</th>
+        <th>Number of Notes/Coins</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <td><img class="note" src="Notes/500.png" alt="500" /></td>
+        <td><input type="number" id="n500" /></td>
+        <td><div class="total" id="tot500"></div></td>
+      </tr>
+      <tr>
+        <td><img class="note" src="Notes/200.png" alt="200" /></td>
+        <td><input type="number" id="n200" /></td>
+        <td><div class="total" id="tot200"></div></td>
+      </tr>
+      <tr>
+        <td><img class="note" src="Notes/100.png" alt="100" /></td>
+        <td><input type="number" id="n100" /></td>
+        <td><div class="total" id="tot100"></div></td>
+      </tr>
+      <tr>
+        <td><img class="note" src="Notes/50.png" alt="50" /></td>
+        <td><input type="number" id="n50" /></td>
+        <td><div class="total" id="tot50"></div></td>
+      </tr>
+      <tr>
+        <td><img class="note" src="Notes/20.png" alt="20" /></td>
+        <td><input type="number" id="n20" /></td>
+        <td><div class="total" id="tot20"></div></td>
+      </tr>
+      <tr>
+        <td><img class="note" src="Notes/10.jpg" alt="10" /></td>
+        <td><input type="number" id="n10" /></td>
+        <td><div class="total" id="tot10"></div></td>
+      </tr>
+      <tr>
+        <td><img class="coin" src="coins/20.png" alt="20 coin" /></td>
+        <td><input type="number" id="c20" /></td>
+        <td><div class="total" id="totc20"></div></td>
+      </tr>
+      <tr>
+        <td><img class="coin" src="coins/10.png" alt="10 coin" /></td>
+        <td><input type="number" id="c10" /></td>
+        <td><div class="total" id="totc10"></div></td>
+      </tr>
+      <tr>
+        <td><img class="coin" src="coins/5.png" alt="5 coin" /></td>
+        <td><input type="number" id="c5" /></td>
+        <td><div class="total" id="totc5"></div></td>
+      </tr>
+      <tr>
+        <td><img class="coin" src="coins/2.png" alt="2 coin" /></td>
+        <td><input type="number" id="c2" /></td>
+        <td><div class="total" id="totc2"></div></td>
+      </tr>
+      <tr>
+        <td><img class="coin" src="coins/1.jpg" alt="1 coin" /></td>
+        <td><input type="number" id="c1" /></td>
+        <td><div class="total" id="totc1"></div></td>
+      </tr>
+
+      <tr>
+        <td colspan="2" style="text-align: center"><h3>TOTAL</h3></td>
+        <td id="final"></td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>

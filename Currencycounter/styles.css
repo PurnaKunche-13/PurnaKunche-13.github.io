@@ -1,0 +1,35 @@
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.note {
+  height: 50px;
+  width: 125px;
+}
+
+.coin {
+  height: 50px;
+  width: 50px;
+  padding-left: 30px;
+  justify-items: center;
+}
+
+.total {
+  width: 100px;
+  text-align: center;
+}
+
+#final {
+  text-align: center;
+}
+input {
+  height: 50px;
+  text-align: center;
+}
+button {
+  height: 30px;
+  width: 100px;
+  background-color: rgb(249, 146, 11);
+  margin-bottom: 10px;
+  margin-left: 303.5px;
+}
