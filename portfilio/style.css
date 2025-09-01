@@ -16,8 +16,15 @@
   --main-color: #3a9eeb;
   --white-color: white;
   --disabled-color: #fff3;
+  --leetcode-color: #f3c42d;
 }
 
+.leetcode {
+  color: var(--leetcode-color);
+}
+.hackker {
+  color: var(--main-color);
+}
 html {
   font-size: 62.5%;
 }
@@ -203,14 +210,17 @@ section.active {
   color: var(--bg-color);
   box-shadow: 0 0 1rem var(--main-color);
 }
+#h {
+  color: var(--main-color);
+}
 
-.codechef {
+/* .codechef {
   background: var(--bg-color);
 }
 
 .codechef:hover {
   background: url("./images/logos/codechef-black.png");
-}
+} */
 
 .home-img .img-box {
   position: relative;
