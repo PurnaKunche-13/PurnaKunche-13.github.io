@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kunche Purna Venkata Narasimha Murthy - Full-Stack Developer & AI/ML Enthusiast. Discover projects, experience, skills, and coding stats.">
+    <title>Purna Narasimha Murthy | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Floating Lines -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="header-container container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Purna<span class="logo-accent">.Kunche /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link active-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#contact" class="nav-link nav-btn">Contact Me</a>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-container container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Kunche Purna Venkata<br>
+                        <span class="text-gradient">Narasimha Murthy</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        I am a <span id="typing-text"></span><span class="typed-cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        Full-stack and AI-focused CS undergraduate skilled in REST APIs, NLP systems, and scalable web applications. Strong in DSA, backend engineering, and applied ML.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    
+                    <!-- Quick Contact / Socials -->
+                    <div class="hero-socials logoloop logoloop--horizontal logoloop--fade logoloop--scale-hover" data-logo-loop data-speed="72" data-hover-speed="0" data-direction="left" role="region" aria-label="Social profile links">
+                        <div class="logoloop__track">
+                            <ul class="logoloop__list" role="list">
+                                <li class="logoloop__item" role="listitem">
+                                    <a href="https://github.com/PurnaKunche-13" target="_blank" rel="noopener noreferrer" class="social-link logoloop__link" title="GitHub" aria-label="GitHub profile">
+                                        <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo">
+                                    </a>
+                                </li>
+                                <li class="logoloop__item" role="listitem">
+                                    <a href="https://linkedin.com/in/purnakunche" target="_blank" rel="noopener noreferrer" class="social-link logoloop__link" title="LinkedIn" aria-label="LinkedIn profile">
+                                        <svg class="brand-icon brand-icon-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27ZM5.32 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.1 20.45H3.54V9H7.1v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg>
+                                    </a>
+                                </li>
+                                <li class="logoloop__item" role="listitem">
+                                    <a href="https://leetcode.com/u/purnakunche/" target="_blank" rel="noopener noreferrer" class="social-link logoloop__link" title="LeetCode" aria-label="LeetCode profile">
+                                        <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode logo">
+                                    </a>
+                                </li>
+                                <li class="logoloop__item" role="listitem">
+                                    <a href="https://codechef.com/users/purnakunche" target="_blank" rel="noopener noreferrer" class="social-link logoloop__link" title="CodeChef" aria-label="CodeChef profile">
+                                        <img src="https://cdn.simpleicons.org/codechef/5B4638" alt="CodeChef logo">
+                                    </a>
+                                </li>
+
+                                <li class="logoloop__item" role="listitem">
+                                    <a href="https://wa.me/PurnaKunche" target="_blank" rel="noopener noreferrer"
+                                    class="social-link logoloop__link"
+                                    title="WhatsApp"
+                                    aria-label="WhatsApp profile">
+                                        <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp logo">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Floating Highlights Dashboard -->
+                 <div class="hero-profile-frame" aria-label="Profile photo" style=" position: absolute; margin-top: 150px; margin-left: 130px;">
+                        <img src="profile.png" alt="Purna Narasimha Murthy" class="hero-profile-img">
+                    </div>
+                <div class="hero-visual">
+                    <div class="glass-card hero-stats-card float-anim-1">
+                        <div class="stats-icon text-cyan">
+                            <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode logo">
+                        </div>
+                        <div class="stats-info">
+                            <span class="stats-num">1700+</span>
+                            <span class="stats-txt">LeetCode Rating </span>
+                        </div>
+                    </div>
+                    <div class="glass-card hero-stats-card float-anim-2">
+                        <div class="stats-icon text-purple">
+                            <img src="https://cdn.simpleicons.org/codechef/5B4638" alt="CodeChef logo">
+                        </div>
+                        <div class="stats-info">
+                            <span class="stats-num">1745+</span>
+                            <span class="stats-txt">CodeChef Rating</span>
+                        </div>
+                    </div>
+                    <div class="glass-card hero-stats-card float-anim-3">
+                        <div class="stats-icon text-pink">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 6v6l4 2"></path></svg>
+                        </div>
+                        <div class="stats-info">
+                            <span class="stats-num">8.38</span>
+                            <span class="stats-txt">B.Tech CGPA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll Down">
+                    <span class="mouse">
+                        <span class="wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section class="about-section section" id="about">
+            <div class="container">
+                <h2 class="section-title">About & Education</h2>
+                <div class="about-grid">
+                    <div class="about-info">
+                        <p class="lead-text">
+                            I am a pre-final year Computer Science undergraduate at SASI Institute of Technology and Engineering.
+                        </p>
+                        <p class="about-para">
+                            My developer journey is fueled by a strong interest in AI/ML engineering, combined with building performant web applications. As a student and instructor, I love explaining complex algorithms and structures, having taught over 70 students array logic, string operations, and recursion.
+                        </p>
+                        
+                        <!-- Extracurricular Activities -->
+                        <div class="extracurriculars mt-4">
+                            <h3 class="subsection-title">Extracurricular Roles</h3>
+                            <div class="extra-list">
+                                <div class="extra-item">
+                                    <div class="extra-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    </div>
+                                    <div class="extra-details">
+                                        <h4>SIH Internal Hackathon Coordinator</h4>
+                                        <p>Managed event logistics and operations for 700+ participants. Led a coordinator team and resolved real-time coordination challenges.</p>
+                                    </div>
+                                </div>
+                                <div class="extra-item">
+                                    <div class="extra-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="extra-details">
+                                        <h4>Technical Event Participant</h4>
+                                        <p>Actively participated in technical events including <strong>Hackathons</strong>, <strong>Tech Quiz</strong>, and <strong>Blind Coding</strong> competitions, strengthening problem-solving, teamwork, and competitive programming skills.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Timeline Card -->
+                    <div class="education-card glass-card">
+                        <h3 class="subsection-title">Education</h3>
+                        <div class="edu-timeline">
+                            <div class="edu-item">
+                                <div class="edu-circle"></div>
+                                <div class="edu-meta">
+                                    <span class="edu-date">2023 - Current</span>
+                                    <span class="edu-grade">CGPA: 8.38 / 10</span>
+                                </div>
+                                <h4 class="edu-degree">B.Tech in Computer Science</h4>
+                                <p class="edu-institute">SASI Institute of Technology and Engineering, AP</p>
+                                <ul class="edu-bullets">
+                                    <li>Focusing on Core CS (Data Structures, DBMS, OOP, Algorithms)</li>
+                                    <li>Active in competitive programming and technical hackathons</li>
+                                </ul>
+                            </div>
+                        </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section section" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Technologies</h2>
+                
+                <!-- Category Selectors -->
+                <div class="skills-filters">
+                    <button class="filter-chip active" data-filter="all">All Skills</button>
+                    <button class="filter-chip" data-filter="lang">Languages</button>
+                    <button class="filter-chip" data-filter="web">Web Dev</button>
+                    <button class="filter-chip" data-filter="db">Databases</button>
+                    <button class="filter-chip" data-filter="ai">AI / ML</button>
+                    <button class="filter-chip" data-filter="tools">Tools & Core</button>
+                </div>
+
+                <div class="skills-grid" id="skills-container">
+                    <div class="skills-category-column" data-category="lang">
+                        <h3 class="skills-category-title">Languages</h3>
+                        <div class="skill-list">
+                            <div class="skill-card glass-card" data-category="lang">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python logo"></span>
+                                    <h3>Python</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="lang">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/openjdk/ED8B00" alt="Java logo"></span>
+                                    <h3>Java</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="lang">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/c/A8B9CC" alt="C logo"></span>
+                                    <h3>C Language</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 75%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="lang">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo"></span>
+                                    <h3>JavaScript</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="lang">
+                                <div class="skill-header">
+                                    <span class="skill-icon">
+                                        <img src="https://cdn.simpleicons.org/csharp/FFFFFF" alt="C# logo">
+                                    </span>
+                                    <h3>C#</h3>
+                                </div>
+                                <div class="skill-progress-wrapper">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-column" data-category="web">
+                        <h3 class="skills-category-title">Web Dev</h3>
+                        <div class="skill-list">
+                            <div class="skill-card glass-card" data-category="web">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/nodedotjs/5FA04E" alt="Node.js logo"></span>
+                                    <h3>Node.js</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="web">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/express/FFFFFF" alt="Express.js logo"></span>
+                                    <h3>Express.js</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="web">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/swagger/85EA2D" alt="REST API logo"></span>
+                                    <h3>REST APIs</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="web">
+                                <div class="skill-header">
+                                    <span class="skill-icon skill-icon-pair">
+                                        <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5 logo">
+                                        <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3 logo">
+                                    </span>
+                                    <h3>HTML5 & CSS3</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="web">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/ejs/B4CA65" alt="EJS logo"></span>
+                                    <h3>EJS</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 70%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-column" data-category="db">
+                        <h3 class="skills-category-title">Databases</h3>
+                        <div class="skill-list">
+                            <div class="skill-card glass-card" data-category="db">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB logo"></span>
+                                    <h3>MongoDB</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="db">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL logo"></span>
+                                    <h3>PostgreSQL</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 70%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="backend">
+                            <div class="skill-header">
+                                <span class="skill-icon">
+                                    <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase logo">
+                                </span>
+                                <h3>Supabase</h3>
+                            </div>
+                            <div class="skill-progress-wrapper">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-column" data-category="ai">
+                        <h3 class="skills-category-title">AI / ML</h3>
+                        <div class="skill-list">
+                            <div class="skill-card glass-card" data-category="ai">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/huggingface/FFD21E" alt="Hugging Face logo"></span>
+                                    <h3>Hugging Face</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 80%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="ai">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch logo"></span>
+                                    <h3>PyTorch</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 75%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="ai">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Machine learning logo"></span>
+                                    <h3>NLP & ML</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="ai">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/opencv/5C3EE8" alt="Computer vision logo"></span>
+                                    <h3>YOLOv8</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 70%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-category-column" data-category="tools">
+                        <h3 class="skills-category-title">Tools & Core</h3>
+                        <div class="skill-list">
+                            <div class="skill-card glass-card" data-category="tools">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo"></span>
+                                    <h3>Git & GitHub</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="tools">
+                                <div class="skill-header">
+                                    <span class="skill-icon">
+                                        <img src="https://cdn.simpleicons.org/googlecolab/F9AB00" alt="Google Colab logo">
+                                    </span>
+                                    <h3>Google Colab</h3>
+                                </div>
+                                <div class="skill-progress-wrapper">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="tools">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode logo"></span>
+                                    <h3>DSA & OOP</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                            <div class="skill-card glass-card" data-category="tools">
+                                <div class="skill-header">
+                                    <span class="skill-icon"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="DBMS logo"></span>
+                                    <h3>DBMS Core</h3>
+                                </div>
+                                <div class="skill-progress-wrapper"><div class="skill-progress" style="width: 80%;"></div></div>
+                            </div>
+                        </div>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section section" id="experience">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="experience-timeline">
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-title-info">
+                                <h3 class="exp-role">Data Structures & Algorithms Instructor</h3>
+                                <span class="exp-company">SASI Institute of Technology & Engineering</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-duration">April 2026 - Present</span>
+                            </div>
+                        </div>
+
+                        <ul class="exp-bullets">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Teaching <strong>Data Structures and Algorithms (DSA)</strong> using Python and Java  to undergraduate students, covering arrays, linked lists, trees, graphs, dynamic programming, and advanced problem-solving techniques.</span>
+                            </li>
+
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Designed coding assignments, conducted live problem-solving sessions, and mentored <strong>70+ students</strong> to improve algorithmic thinking and interview preparation.</span>
+                            </li>
+
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Evaluated coding performance through regular contests, mock interviews, and code reviews, helping students build strong competitive programming and placement skills.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+
+                <div class="experience-timeline">
+                    <!-- Internship Item -->
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-title-info">
+                                <h3 class="exp-role">Full Stack Development Intern</h3>
+                                <span class="exp-company">CodeAlpha</span>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-duration">Mar 2025 - Apr 2025</span>
+                                <a href="https://civicpulse-sygu.onrender.com" target="_blank" rel="noopener noreferrer" class="exp-link" title="GitHub Code Repository">
+                                    <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo"> Live
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Built a complete <strong>civic issue reporting platform</strong> using Node.js, Express.js, and MongoDB, handling <strong>200+ concurrent issue submissions</strong> during test phase.</span>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Optimized backend queries and request routing architecture, accelerating overall platform responsiveness by <strong>30% </strong>.</span>
+                            </li>
+                            </ul>
+                    </div>
+                </div>
+                <br>
+
+                <div class="experience-timeline">
+                    <div class="exp-card glass-card">
+                        <div class="exp-header">
+                            <div class="exp-title-info">
+                                <h3 class="exp-role">Data Analytics Job Simulation</h3>
+                                <span class="exp-company">Deloitte (Forage)</span>  
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-duration">August 2025</span>
+                               <a href="https://drive.google.com/file/d/1fEpHthoqbTDIAh7qCwDP3nLnxbl1b0jq/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="exp-link" title="View Certificate">
+                                    📜 Certificate
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="exp-bullets">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Completed a <strong>Data Analytics Job Simulation</strong>, solving real-world business challenges in <strong>data analysis</strong> and <strong>forensic technology</strong>.</span>
+                                </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bullet-icon text-cyan"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <span>Strengthened skills in <strong>data interpretation</strong>, <strong>critical thinking</strong>, and <strong>business decision-making</strong> through practical consulting scenarios.</span>
+                            </li>
+                            </ul>
+                    </div>
+                </div>
+
+
+                
+                
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects-section section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Projects </h2>
+                
+                <div class="project-carousel-shell">
+                    <button class="project-carousel-btn project-carousel-btn--prev" type="button" data-loop-control="prev" data-loop-target="projects-container" aria-label="Show previous projects">
+                        <span aria-hidden="true">&#8249;</span>
+                    </button>
+
+                    <div class="projects-grid project-logoloop logoloop logoloop--horizontal logoloop--fade" id="projects-container" data-logo-loop data-speed="100" data-hover-speed="0" data-direction="left" role="region" aria-label="Featured project carousel">
+                        <div class="logoloop__track">
+                            <ul class="logoloop__list project-logoloop__list" role="list" >
+                                <!---NLp-Text-Classsifier-------->
+                                <li class="logoloop__item project-logoloop__item" role="listitem">
+                                    <div class="project-card glass-card" data-proj-cat="ai">
+                                        <div class="project-img-placeholder">
+                                            <img src="nlp text classifier.png" alt="NLP Text Classification project preview" class="project-icon-img">
+                                            <span class="project-tag">AI & NLP</span>
+                                        </div>
+                                        <div class="project-content">
+                                            <h3 class="project-title">NLP Text Classification</h3>
+                                            <p class="project-desc">Fine-tuned state-of-the-art transformer architectures to perform high-precision document classification on benchmark datasets.</p>
+                                            <div class="project-tech">
+                                                <span>Python</span>
+                                                <span>Hugging Face</span>
+                                                <span>PyTorch</span>
+                                            </div>
+                                            <div class="project-links">
+                                                <span class="project-stat-badge">Accuracy: 91.56%</span>
+                                                <a href="https://nlp-text-classifier.onrender.com" target="_blank"  rel="noopener noreferrer" class="project-link-btn" title="Live Demo">
+                                                            <img src="https://img.icons8.com/ios-filled/50/FFFFFF/external-link.png"
+                                                                alt="Live Demo">
+                                                        </a>
+                                                <a href="https://github.com/PurnaKunche-13/NLP-Text-classifier" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Code Repository">
+                                                    <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!---Lefrade AI-------->
+                                <li class="logoloop__item project-logoloop__item" role="listitem">
+                                    <div class="project-card glass-card" data-proj-cat="ai">
+                                        <div class="project-img-placeholder">
+                                            <img src="Lefrade.png" alt="Credit Card Fraud Detection project preview" class="project-icon-img">
+                                            <span class="project-tag">AI & ML</span>
+                                        </div>
+
+                                        <div class="project-content">
+                                            <h3 class="project-title">Credit Card Fraud Detection</h3>
+
+                                            <p class="project-desc">
+                                                Developed a real-time fraud detection system powered by machine learning to identify suspicious credit card transactions with high accuracy. The application analyzes transaction patterns, predicts fraudulent activity, and provides an interactive security dashboard for instant risk assessment.
+                                            </p>
+
+                                            <div class="project-tech">
+                                                <span>Python</span>
+                                                <span>Scikit-learn</span>
+                                                <span>Flask</span>
+                                            </div>
+
+                                            <div class="project-links">
+                                                <span class="project-stat-badge">Accuracy: 99.82%</span>
+
+                                                <a href="https://lefradeai.onrender.com"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="Live Demo">
+                                                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/external-link.png"
+                                                        alt="Live Demo">
+                                                </a>
+
+                                                <a href="https://github.com/PurnaKunche-13/Transaction-Fraud-Detection" target="_blank" rel="noopener noreferrer" class="project-link-btn" title="GitHub Code Repository">
+                                                    <img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!----COdeChef-------->
+                                <li class="logoloop__item project-logoloop__item" role="listitem">
+                                    <div class="project-card glass-card" data-proj-cat="web">
+                                        <div class="project-img-placeholder">
+                                            <img src="codechef.png" alt="CodeChef Rating Lookup project preview" class="project-icon-img">
+                                            <span class="project-tag">Web App</span>
+                                        </div>
+
+                                        <div class="project-content">
+                                            <h3 class="project-title">CodeChef Rating Lookup</h3>
+
+                                            <p class="project-desc">
+                                                Built a responsive web application that retrieves and visualizes CodeChef user ratings in real time. The platform supports multi-user lookup, advanced filtering, sorting, and ranking insights, enabling quick comparison of competitive programming performance across multiple users.
+                                            </p>
+
+                                            <div class="project-tech">
+                                                <span>JavaScript</span>
+                                                <span>HTML/CSS</span>
+                                                <span>CodeChef API</span>
+                                            </div>
+
+                                            <div class="project-links">
+                                                <span class="project-stat-badge">Real-Time Lookup</span>
+
+                                                <a href="https://codechef-rating-verifier.onrender.com/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="Live Demo">
+                                                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/external-link.png"
+                                                        alt="Live Demo">
+                                                </a>
+
+                                                <a href="https://github.com/PurnaKunche-13/CodeChef-Rating-Verifier"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="GitHub Code Repository">
+                                                    <img src="https://cdn.simpleicons.org/github/FFFFFF"
+                                                        alt="GitHub logo">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!---Civic Pulse-------->
+                                <li class="logoloop__item project-logoloop__item" role="listitem">
+                                    <div class="project-card glass-card" data-proj-cat="ai">
+                                        <div class="project-img-placeholder">
+                                            <img src="Screenshot 2026-07-19 201332.png" alt="CivicPulse project preview" class="project-icon-img">
+                                            <span class="project-tag">AI & Web</span>
+                                        </div>
+
+                                        <div class="project-content">
+                                            <h3 class="project-title">CivicPulse</h3>
+
+                                            <p class="project-desc">
+                                                Engineered an AI-powered civic issue management platform that enables citizens to report public infrastructure problems while providing administrators with a centralized dashboard to monitor, prioritize, and resolve complaints using real-time analytics and intelligent insights.
+                                            </p>
+
+                                            <div class="project-tech">
+                                                <span>React</span>
+                                                <span>Node.js</span>
+                                                <span>AI Integration</span>
+                                            </div>
+
+                                            <div class="project-links">
+                                                <span class="project-stat-badge">AI-Powered</span>
+
+                                                <a href="https://civicpulse-sygu.onrender.com"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="Live Demo">
+                                                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/external-link.png"
+                                                        alt="Live Demo">
+                                                </a>
+
+                                                <a href="https://github.com/PurnaKunche-13/CivicPulse-Real-Time-Civic-Complaint-Management-System_CodeAlpha-Internship-Aug-2025"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="GitHub Code Repository">
+                                                    <img src="https://cdn.simpleicons.org/github/FFFFFF"
+                                                        alt="GitHub logo">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!----------Spam Guard AI-------->
+                                <li class="logoloop__item project-logoloop__item" role="listitem">
+                                    <div class="project-card glass-card" data-proj-cat="ai">
+                                        <div class="project-img-placeholder">
+                                            <img src="spamguadAI.png" alt="SpamGuard AI project preview" class="project-icon-img">
+                                            <span class="project-tag">AI & NLP</span>
+                                        </div>
+
+                                        <div class="project-content">
+                                            <h3 class="project-title">SpamGuard AI</h3>
+
+                                            <p class="project-desc">
+                                                Developed an end-to-end AI-powered spam detection system that classifies SMS and text messages using TF-IDF feature extraction and a PyTorch classifier. Integrated a Flask REST API with an interactive web interface for real-time spam prediction and probability analysis.
+                                            </p>
+
+                                            <div class="project-tech">
+                                                <span>Python</span>
+                                                <span>PyTorch</span>
+                                                <span>Flask</span>
+                                            </div>
+
+                                            <div class="project-links">
+                                                <span class="project-stat-badge">Spam Detector</span>
+
+                                                <a href="https://spamguard-ai-w659.onrender.com/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="Live Demo">
+                                                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/external-link.png"
+                                                        alt="Live Demo">
+                                                </a>
+
+                                                <a href="https://github.com/PurnaKunche-13/SpamGuardAI"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="project-link-btn"
+                                                title="GitHub Code Repository">
+                                                    <img src="https://cdn.simpleicons.org/github/FFFFFF"
+                                                        alt="GitHub logo">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="project-carousel-btn project-carousel-btn--next" type="button" data-loop-control="next" data-loop-target="projects-container" aria-label="Show next projects">
+                        <span aria-hidden="true">&#8250;</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Achievements Section -->
+        <section class="achievements-section section" id="achievements">
+            <div class="container">
+                <h2 class="section-title">Achievements & Badges</h2>
+                
+                <div class="achievements-grid">
+                    <!-- LeetCode Achievement Card -->
+                    <div class="glass-card achievement-card">
+                        <div class="achievement-icon text-cyan">
+                            <img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode logo">
+                        </div>
+                        <h3 class="achievement-title">LeetCode Star</h3>
+                        <p class="achievement-metric"> 1700+ Rating  <br> 200+ Solved problems </p>
+                        <p class="achievement-desc">Achieved deep familiarity with advanced algorithmic design principles, dynamic programming, and graphs.</p>
+                        <div class="achievement-footer">
+                            <a href="https://leetcode.com/u/purnakunche13/" target="_blank" rel="noopener noreferrer" class="link-anchor">Verify Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- CodeChef Rating Card -->
+                    <div class="glass-card achievement-card">
+                        <div class="achievement-icon text-purple">
+                            <img src="https://cdn.simpleicons.org/codechef/5B4638" alt="CodeChef logo">
+                        </div>
+                        <h3 class="achievement-title">CodeChef </h3>
+                        <p class="achievement-metric">1745 Rating ( 3-Star ) <br> 1990+ Problems</p>
+                        <p class="achievement-desc">Competitive Programmer ranking in the top percentiles of global division contests resolving challenging complexity bounds.</p>
+                        <div class="achievement-footer">
+                            <a href="https://codechef.com/users/purnakunche" target="_blank" rel="noopener noreferrer" class="link-anchor">Verify Profile</a>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Info -->
+                    <div class="glass-card certs-card">
+                        <h3 class="subsection-title">Certifications & Events</h3>
+                        <ul class="certs-list">
+                            <li>
+                                <span class="cert-bullet">CERT</span>
+                                <div>
+                                    <strong>NPTEL IoT Silver Certification</strong>
+                                    <p>Earned Elite + Silver level credential in Internet of Things concepts.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="cert-bullet">DEV</span>
+                                <div>
+                                    <strong>Professional Developer Certs</strong>
+                                    <p>Certified in Python, Java, C, Prompt Engineering, Tableau, Git & GitHub.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="cert-bullet">EVT</span>
+                                <div>
+                                    <strong>Hackathons & Technical Events</strong>
+                                    <p>Regular contributor and contest participant in Tech Quizzes & Blind Coding events.</p>
+                                </div>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="contact-section section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Let's Connect</h2>
+                
+                <div class="contact-grid">
+                    <!-- Contact Cards -->
+                    <div class="contact-info-cards">
+                        <!-- Email -->
+                        <div class="glass-card contact-card">
+                            <div class="contact-icon text-cyan">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                            </div>
+                            <div class="contact-card-info">
+                                <h3>Email Me</h3>
+                                <a href="mailto:murthy.kunche@sasi.ac.in" class="contact-link">murthy.kunche@sasi.ac.in</a>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="glass-card contact-card">
+                            <div class="contact-icon text-purple">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-card-info">
+                                <h3>Call Me</h3>
+                                <a href="tel:+916302534717" class="contact-link">+91 6302534717</a>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="glass-card contact-card">
+                            <div class="contact-icon text-pink">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <div class="contact-card-info">
+                                <h3>Location</h3>
+                                <span class="contact-text">Andhra Pradesh, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="glass-card contact-form-card">
+                        <form id="portfolio-contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" placeholder="Purna Kunche" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email Address</label>
+                                <input type="email" id="form-email" placeholder="User@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-message">Your Message</label>
+                                <textarea id="form-message" rows="5" placeholder="Hi Purna, I'd love to chat about..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Send Message</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="submit-icon"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container container">
+            <p class="footer-copy">&copy; 2026 Kunche Purna Venkata Narasimha Murthy. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/PurnaKunche-13" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub logo"><span>GitHub</span></a>
+                <a href="https://linkedin.com/in/purnakunche" target="_blank" rel="noopener noreferrer"><svg class="brand-icon brand-icon-linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27ZM5.32 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.1 20.45H3.54V9H7.1v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z"/></svg><span>LinkedIn</span></a>
+                <a href="https://leetcode.com/u/purnakunche13/" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/leetcode/FFA116" alt="LeetCode logo"><span>LeetCode</span></a>
+                <a href="https://codechef.com/users/purnakunche" target="_blank" rel="noopener noreferrer"><img src="https://cdn.simpleicons.org/codechef/5B4638" alt="CodeChef logo"><span>CodeChef</span></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Script file -->
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
